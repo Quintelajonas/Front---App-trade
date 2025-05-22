@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upload XLSX</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div id="menu-container"></div>
+    <script>
+        fetch('../Menu/menu.html')
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById('menu-container').innerHTML = html;
+            });
+    </script>
+
+    <div class="Super-container">
+        <div class="container">
+
+            <h3>Upload de Arquivo De Resultados</h3>
+            <form id="uploadForm">
+                <input type="file" name="file" class="fileInput" id="fileInput" accept=".xlsx" required />
+                <button type="button" id="cancelFileBtn" class="cancel-btn" title="Remover arquivo"
+                    style="display: none;">&#10006;</button>
+                <br />
+                <button type="submit" class="btn-enviar">Enviar</button>
+            </form>
+            <div class="message" id="message"></div>
+        </div>
+    </div>
+
+    <script src="upload.js"></script>
+</body>
+
+</html>

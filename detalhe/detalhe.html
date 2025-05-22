@@ -1,0 +1,65 @@
+<!-- detalhe.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Promotor</title>
+    <link rel="stylesheet" href="detalhe.css" />
+</head>
+
+<body>
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Upload XLSX</title>
+        <link rel="stylesheet" href="../style.css" />
+    </head>
+
+    <body>
+        <div id="menu-container"></div>
+<script>
+    fetch('../Menu/menu.html')
+        .then(res => res.text())
+        .then(html => {
+            document.getElementById('menu-container').innerHTML = html;
+
+            const logoutBtn = document.getElementById('logoutBtn');
+            if (logoutBtn) {
+                logoutBtn.addEventListener('click', () => {
+                    localStorage.removeItem('token');
+                    localStorage.removeItem('nomeUsuario');
+                    window.location.href = '../Login/login.html';
+                });
+            }
+        });
+</script>
+
+        <br>
+        <br>
+        <div class="container-up">
+
+            <div class="container-dupla">
+                
+                <div class="container-detalhe">
+                    <div id="detalhesPromotor"></div>
+                </div>
+
+                <div class="feedbacks">
+                    <h3>Feedbacks Aplicados</h3>
+                    <hr>
+                    <a id="botaoFeedback" href="#">➕ Aplicar Novo Feedback</a>
+                    <br>
+                    <div id="listaFeedbacks"></div>
+                    <br>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="detalhe.js"></script>
+    </body>
+
+</html>

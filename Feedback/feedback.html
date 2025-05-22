@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aplicar Feedback</title>
+  <link rel="stylesheet" href="feedback.css" />
+</head>
+<body>
+  <h2>Aplicar Feedback ao Promotor</h2>
+<div class="container-form">
+  <form id="feedbackForm">
+    <!-- ID do promotor virá do contexto da página -->
+    <input type="hidden" name="promotorId" id="promotorId" value="1" />
+
+    <label for="usuarioId">Aplicado por:</label>
+    <select id="usuarioId" name="usuarioId" required></select>
+
+    <label>Promotor encontrado abordando?</label>
+    <div class="radio-group">
+      <label><input type="radio" name="abordou" value="true" required> Sim</label>
+      <label><input type="radio" name="abordou" value="false"> Não</label>
+    </div>
+
+    <label>Promotor uniformizado?</label>
+    <div class="radio-group">
+      <label><input type="radio" name="uniformizado" value="true" required> Sim</label>
+      <label><input type="radio" name="uniformizado" value="false"> Não</label>
+    </div>
+
+    <label>Promotor domina o produto vendido?</label>
+    <div class="radio-group">
+      <label><input type="radio" name="dominaProduto" value="true" required> Sim</label>
+      <label><input type="radio" name="dominaProduto" value="false"> Não</label>
+    </div>
+
+    <label>Houve advertência?</label>
+    <div class="radio-group">
+      <label><input type="radio" name="advertencia" value="true" required> Sim</label>
+      <label><input type="radio" name="advertencia" value="false"> Não</label>
+    </div>
+
+    <label for="motivoAdvertencia">Motivo da advertência:</label>
+    <input type="text" id="motivoAdvertencia" name="motivoAdvertencia" />
+
+    <label for="observacoes">Observações:</label>
+    <textarea id="observacoes" name="observacoes" rows="4"></textarea>
+
+    <button type="submit">Enviar Feedback</button>
+    <button type="button" id="cancelarBtn">Cancelar</button>
+  </form>
+</div>
+  <script src="feedback.js"></script>
+</body>
+</html>

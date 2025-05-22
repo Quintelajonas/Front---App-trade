@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Promotores</title>
+    <link rel="stylesheet" href="Promotores.css" />
+    
+
+</head>
+
+<body>
+    <div id="menu-container"></div>
+<script>
+    fetch('../Menu/menu.html')
+        .then(res => res.text())
+        .then(html => {
+            document.getElementById('menu-container').innerHTML = html;
+
+            const logoutBtn = document.getElementById('logoutBtn');
+            if (logoutBtn) {
+                logoutBtn.addEventListener('click', () => {
+                    localStorage.removeItem('token');
+                    localStorage.removeItem('nomeUsuario');
+                    window.location.href = '../Login/login.html';
+                });
+            }
+        });
+</script>
+    <h2>Lista de Promotores</h2>
+
+    <div class="search-bar">
+        <input type="text" id="searchInput" class="search-input" placeholder="Buscar por nome ou matrícula" />
+        <button id="searchBtn">Buscar</button>
+    </div>
+
+    <br>
+    <br>
+
+    <div id="promotores-container" class="cards-container">
+        <!-- Cards serão inseridos aqui via JS -->
+    </div>
+
+    <div class="pagination">
+        <button id="prevPage">Anterior</button>
+        <span id="pageInfo"></span>
+        <button id="nextPage">Próxima</button>
+    </div>
+
+    <script src="promotores.js"></script>
+</body>
+
+</html>
