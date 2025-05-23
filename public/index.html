@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Upload XLSX</title>
     <link rel="stylesheet" href="style.css" />
+
 </head>
 
 <body>
     <div id="menu-container"></div>
     <script>
-        fetch('../Menu/menu.html')
+        fetch('../public/Menu/menu.html')
             .then(res => res.text())
             .then(html => {
                 document.getElementById('menu-container').innerHTML = html;
