@@ -17,7 +17,7 @@ advertenciaRadios.forEach(radio => {
 async function carregarUsuarios() {
     try{
 
-        const res = await fetch("http://localhost:3000/usuarios")
+        const res = await fetch("https://backend-resultados.onrender.com/usuarios")
         const usuarios = await res.json()
         
         const select = document.getElementById('usuarioId')
@@ -49,7 +49,7 @@ form.addEventListener('submit', async (e) => {
   };
 
   try {
-    const res = await fetch('http://localhost:3000/feedbacks', {
+    const res = await fetch('https://backend-resultados.onrender.com/feedbacks', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data)

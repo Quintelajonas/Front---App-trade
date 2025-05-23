@@ -11,7 +11,7 @@ if(!token){
 async function fetchPromotores(page = 1) {
   try {
     const query = document.getElementById("searchInput")?.value?.trim();
-    let url = `http://localhost:3000/promotores?page=${page}&limit=${limit}`;
+    let url = `https://backend-resultados.onrender.com/promotores?page=${page}&limit=${limit}`;
 
     if (query) {
       const isMatricula = !isNaN(query);

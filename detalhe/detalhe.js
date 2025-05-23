@@ -14,7 +14,7 @@ async function carregarDetalhes() {
   }
 
   try {
-    const res = await fetch(`http://localhost:3000/promotores/${id}`);
+    const res = await fetch(`https://backend-resultados.onrender.com/${id}`);
     const data = await res.json();
     const promotor = data.promotor;
 
@@ -68,7 +68,7 @@ async function carregarDetalhes() {
 
     // Busca os feedbacks desse promotor
     const resFeedback = await fetch(
-      `http://localhost:3000/promotores/${id}/feedbacks`
+      `https://backend-resultados.onrender.com/${id}/feedbacks`
     );
     const dadosFeedback = await resFeedback.json();
 
