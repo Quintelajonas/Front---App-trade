@@ -14,7 +14,7 @@ async function carregarDetalhes() {
   }
 
   try {
-    const res = await fetch(`https://backend-resultados.onrender.com/${id}`);
+    const res = await fetch(`https://backend-resultados.onrender.com/promotores/${id}`);
     const data = await res.json();
     const promotor = data.promotor;
 
