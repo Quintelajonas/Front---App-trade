@@ -68,7 +68,7 @@ async function carregarDetalhes() {
 
     // Busca os feedbacks desse promotor
     const resFeedback = await fetch(
-      `https://backend-resultados.onrender.com/${id}/feedbacks`
+      `https://backend-resultados.onrender.com/promotores/${id}/feedbacks`
     );
     const dadosFeedback = await resFeedback.json();
 
