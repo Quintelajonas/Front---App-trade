@@ -183,6 +183,26 @@ body {
     flex-direction: column;
   }
 }
+
+@media (max-width: 400px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .navbar ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .navbar p {
+    text-align: center;
+    margin-right: 0px;
+  }
+}
+
 @media (max-width: 375px) {
   .top-card-detalhe {
     display: flex;
@@ -209,7 +229,7 @@ body {
     flex-direction: column;
     align-items: center;
   }
-    .navbar p{
+  .navbar p {
     text-align: center;
     margin-right: 0px;
   }

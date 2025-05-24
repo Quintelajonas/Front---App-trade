@@ -61,7 +61,7 @@ input[type="file"] {
 }
 
 .btn-enviar:hover {
-  background-color:rgb(43, 1, 149);
+  background-color: rgb(43, 1, 149);
 }
 
 .message {
@@ -94,26 +94,36 @@ input[type="file"] {
   font-size: 14px;
 }
 
-
 .navbar p {
   color: #ccc;
   margin-right: 20px;
 }
 
 .navbar a:hover {
-  color:rgb(166, 142, 228);
+  color: rgb(166, 142, 228);
 }
 
 @media (max-width: 400px) {
+  .top-card-detalhe {
+    display: flex;
+    flex-direction: column;
+  }
 
-    .top-card-detalhe{
-        display: flex;
-        flex-direction: column;
-    }
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .navbar ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-     .navbar{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+  .navbar p {
+    text-align: center;
+    margin-right: 0px;
+  }
 }
