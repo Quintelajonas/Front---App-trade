@@ -6,7 +6,7 @@ const motivoField = document.getElementById('motivoAdvertencia');
 advertenciaRadios.forEach(radio => {
     radio.addEventListener('change', () => {
         if(radio.value === "true" && radio.checked) {
-            motivoField.desabled = false
+            motivoField.disabled = false
         } else if (radio.value === "false" && radio.checked) {
             motivoField.disabled = true
             motivoField.value =""
@@ -71,6 +71,11 @@ carregarUsuarios();
 document.addEventListener("DOMContentLoaded", () => {
   const params = new URLSearchParams(window.location.search);
   const promotorId = params.get("promotorId");
+
+
+    if (promotorId) {
+    document.getElementById("promotorId").value = promotorId;
+  }
 
   const cancelarBtn = document.getElementById("cancelarBtn");
 
